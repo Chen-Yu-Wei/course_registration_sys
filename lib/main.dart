@@ -60,6 +60,13 @@ class _LecturerDetailState extends State<LecturerDetail> {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+      decoration: BoxDecoration(
+        border: Border.all(
+          width: 1.0,
+          color: Colors.black
+        ),
+        borderRadius: BorderRadius.circular(5),
+      ),
       child: Column(
         children: [
           ListTile(
@@ -84,7 +91,7 @@ class _LecturerDetailState extends State<LecturerDetail> {
             ),
           ),
           if (_isExpanded)
-            Container(
+            SizedBox(
               height: 230,
               // padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
@@ -102,13 +109,6 @@ class _LecturerDetailState extends State<LecturerDetail> {
               ),
             ),
         ],
-      ),
-      decoration: BoxDecoration(
-        border: Border.all(
-          width: 1.0,
-          color: Colors.black
-        ),
-        borderRadius: BorderRadius.circular(5),
       ),
     );
   }
